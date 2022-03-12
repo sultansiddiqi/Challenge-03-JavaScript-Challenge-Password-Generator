@@ -9,46 +9,47 @@ function generatePassword() {
   console.log('The button has been clicked!');
   var generatedPasswordLength = parseInt(prompt('Choose a number of characters between 8 and 128 for your password!'));
   if (generatedPasswordLength >= 8 && generatedPasswordLength <= 128) {
-    console.log(generatedPasswordLength);
+    console.log('The password length selected is ' + generatedPasswordLength + ' characters.');
+    window.alert('The password length selected is ' + generatedPasswordLength + ' characters.');
 
     // Confirm the characters the user may use
     var includeLowercase = confirm('Inlcude Lowercase characters in your password?'); 
     if (includeLowercase == true) {
-        window.alert('Great! Lowercase will be added.');
-        console.log('Lowercase letters option chosen.');
+      console.log('Lowercase letters option chosen.');  
+      window.alert('Great! Lowercase will be added.');
       } else{
+        console.log('We hear you loud and clear! No lowercase characters.');
         window.alert('We hear you loud and clear! No lowercase characters.');
-        console.log('Lowercase letters option not chosen.');
       }
     var includeUppercase = confirm('How about some UPPERCASE characters?'); 
     if (includeUppercase == true) {
-      window.alert('No problem! Lets add some UPPERCASE characters.');
       console.log('No problem! Lets add some UPPERCASE characters.');
+      window.alert('No problem! Lets add some UPPERCASE characters.');
     } else{
-      window.alert('Sure, no UPPERCASE characters will be added.');
       console.log('Sure, no UPPERCASE characters will be added.');
+      window.alert('Sure, no UPPERCASE characters will be added.');
     }
     var includeNumeric = confirm('How do we feel about including some numbers?'); 
     if(includeNumeric){
-      window.alert('Got it! Adding some NUMBERS.');
       console.log('Got it! Adding some NUMBERS.');
+      window.alert('Got it! Adding some NUMBERS.');
     } else {
-        window.alert('Not a fan? Not always easy remembering so many NUMBERS. They wont be added.');
-        console.log('Not a fan? Not always easy remembering so many NUMBERS. They wont be added.');
+      console.log('Not a fan? Not always easy remembering so many NUMBERS. They wont be added.');  
+      window.alert('Not a fan? Not always easy remembering so many NUMBERS. They wont be added.');
     }
     var includeSpecial = confirm('Last one! Do we want some Special Characters or Symbols?'); 
     if(includeSpecial){
-      window.alert('Ok, some SPECIAL CHARACTERS/SYMBOLS will be added.');
       console.log('Ok, some SPECIAL CHARACTERS/SYMBOLS will be added.');
+      window.alert('Ok, some SPECIAL CHARACTERS/SYMBOLS will be added.');
     } else {
-      window.alert('No SPECIAL CHARACTERS/SYMBOLS will be added.');
       console.log('No SPECIAL CHARACTERS/SYMBOLS will be added.');
+      window.alert('No SPECIAL CHARACTERS/SYMBOLS will be added.');
     }
     // Make sure the user selects 1 of the 4 criteria minimum to continue; Otherwise do not continue
     if (!includeLowercase && !includeUppercase && !includeNumeric && !includeSpecial) {
-      window.alert('Sorry to stop you here, but you have to select at least ONE of the FOUR options to continue! Please try again :)');
       console.log('Sorry to stop you here, but you have to select at least ONE of the FOUR options to continue! Please try again :)');
       console.log('Password was not generated.')
+      window.alert('Sorry to stop you here, but you have to select at least ONE of the FOUR options to continue! Please try again :)');
       return ("Password Not Generated.");
     }
 
@@ -79,9 +80,9 @@ function generatePassword() {
 
     //if incorrect password length
   } else {
-    window.prompt('The value input was incorrect. Choose a number that is between 8 and 128.');
     console.log('The value input was incorrect. Choose a number that is between 8 and 128.');
     console.log('Password Not Generated. Click "Generate Password" button to start again.');
+    window.prompt('The value input was incorrect. Choose a number that is between 8 and 128.');
     return 'Password Not Generated. Click "Generate Password" button to start again.'
   }
 }
