@@ -12,11 +12,38 @@ function generatePassword() {
 
     // Confirm the characters the user may use
     var includeLowercase = confirm('Inlcude Lowercase characters in your password?'); 
+    if (includeLowercase == true) {
+        window.alert('Great! Lowercase will be added.');
+        console.log('Lowercase letters option chosen.');
+      } else{
+        window.alert('We hear you loud and clear! No lowercase characters.');
+        console.log('Lowercase letters option not chosen.');
+      }
     var includeUppercase = confirm('How about some UPPERCASE characters?'); 
+    if (includeUppercase == true) {
+      window.alert('No problem! Lets add some UPPERCASE characters.');
+      console.log('No problem! Lets add some UPPERCASE characters.');
+    } else{
+      window.alert('Sure, no UPPERCASE characters will be added.');
+      console.log('Sure, no UPPERCASE characters will be added.');
+    }
     var includeNumeric = confirm('How do we feel about including some numbers?'); 
+    if(includeNumeric){
+      window.alert('Got it! Adding some NUMBERS.');
+      console.log('Got it! Adding some NUMBERS.');
+    } else {
+        window.alert('Not a fan? Not always easy remembering so many NUMBERS. They wont be added.');
+        console.log('Not a fan? Not always easy remembering so many NUMBERS. They wont be added.');
+    }
     var includeSpecial = confirm('Last one! Do we want some Special Characters or Symbols?'); 
-    
-    // Make sure the user selects 1 of the 4 criteria minimum to continue
+    if(includeSpecial){
+      window.alert('Ok, some SPECIAL CHARACTERS/SYMBOLS will be added.');
+      console.log('Ok, some SPECIAL CHARACTERS/SYMBOLS will be added.');
+    } else {
+      window.alert('No SPECIAL CHARACTERS/SYMBOLS will be added.');
+      console.log('No SPECIAL CHARACTERS/SYMBOLS will be added.');
+    }
+    // Make sure the user selects 1 of the 4 criteria minimum to continue; Otherwise do not continue
     if (!includeLowercase && !includeUppercase && !includeNumeric && !includeSpecial) {
       window.alert('Sorry to stop you here, but you have to select at least ONE of the FOUR options to continue! Please try again :)');
       return ("Password Not Generated.");
@@ -43,7 +70,7 @@ function generatePassword() {
       var index = Math.floor(Math.random() * userSelectedCharacters.length);
       password += userSelectedCharacters[index];
     }
-    console.log(password);
+    console.log('The password has been generated and is as follows: ' + password);
     window.alert("Your password has been generated!");
     return password;
 
