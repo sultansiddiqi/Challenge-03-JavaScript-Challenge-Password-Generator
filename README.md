@@ -1,8 +1,22 @@
-# 03 JavaScript: Password Generator
+# Challenge 03 JavaScript: Password Generator
+## By Sultan Siddiqi
+## Email: sultan.siddiqi@gmail.com
+## GitLab Profile: sultansiddiqi
+
+## Link to Challenge 
+https://sultansiddiqi.github.io/Challenge-03-JavaScript-Challenge-Password-Generator/
+
+## Project Description
 
 Create an application that generates a random password based on user-selected criteria. The app runs in the browser and features dynamically updated HTML and CSS powered by your JavaScript code. It has a clean and polished user interface and is responsive, which ensures that it adapts to multiple screen sizes.
 
 If you are unfamiliar with special characters, take a look at some [examples of special characters on the OWASP Foundation website](https://www.owasp.org/index.php/Password_special_characters).
+
+## Overview of Work
+- I made the mistake of tackling the uploading and repository work all at once
+- Took a lot of time to independently search for the correct way to do this assignment
+- Many different methods exist but I attempted in a way where I tried to keep the code short and concise
+- I dont want too many steps and too many loops or functions happening as it becomes sloppy and messy
 
 ## User Story
 
@@ -44,5 +58,4 @@ You are required to submit the following for review:
 
 * The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
 
-- - -
-© 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+
