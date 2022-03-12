@@ -6,6 +6,7 @@ var special = '~`!@#$%^&*()-_+={}[]|:;/\"\'\\<>,.?';
 
 // Password Length is required between 8-128 characters
 function generatePassword() {
+  console.log('The button has been clicked!');
   var generatedPasswordLength = parseInt(prompt('Choose a number of characters between 8 and 128 for your password!'));
   if (generatedPasswordLength >= 8 && generatedPasswordLength <= 128) {
     console.log(generatedPasswordLength);
@@ -46,6 +47,8 @@ function generatePassword() {
     // Make sure the user selects 1 of the 4 criteria minimum to continue; Otherwise do not continue
     if (!includeLowercase && !includeUppercase && !includeNumeric && !includeSpecial) {
       window.alert('Sorry to stop you here, but you have to select at least ONE of the FOUR options to continue! Please try again :)');
+      console.log('Sorry to stop you here, but you have to select at least ONE of the FOUR options to continue! Please try again :)');
+      console.log('Password was not generated.')
       return ("Password Not Generated.");
     }
 
@@ -77,6 +80,8 @@ function generatePassword() {
     //if incorrect password length
   } else {
     window.prompt('The value input was incorrect. Choose a number that is between 8 and 128.');
+    console.log('The value input was incorrect. Choose a number that is between 8 and 128.');
+    console.log('Password Not Generated. Click "Generate Password" button to start again.');
     return 'Password Not Generated. Click "Generate Password" button to start again.'
   }
 }
