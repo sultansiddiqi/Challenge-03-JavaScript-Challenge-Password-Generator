@@ -13,7 +13,7 @@ function generatePassword() {
     window.alert('The password length selected is ' + generatedPasswordLength + ' characters.');
 
     // Confirm the characters the user may use
-    var includeLowercase = confirm('Inlcude Lowercase characters in your password?'); 
+    var includeLowercase = confirm('Include Lowercase characters in your password?'); 
     if (includeLowercase == true) {
       console.log('Lowercase letters option chosen.');  
       window.alert('Great! Lowercase will be added.');
@@ -46,7 +46,7 @@ function generatePassword() {
       window.alert('No SPECIAL CHARACTERS/SYMBOLS will be added.');
     }
     // Make sure the user selects 1 of the 4 criteria minimum to continue; Otherwise do not continue
-    if (!includeLowercase && !includeUppercase && !includeNumeric && !includeSpecial) {
+    if (!includeLowercase && !includeUppercase && !includeNumeric && !includeSpecial) { 
       console.log('Sorry to stop you here, but you have to select at least ONE of the FOUR options to continue! Please try again :)');
       console.log('Password was not generated.')
       window.alert('Sorry to stop you here, but you have to select at least ONE of the FOUR options to continue! Please try again :)');
